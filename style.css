@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1fafe;
+}
+
+.container {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 75px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.switch > .checkbox {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  background-color: #b3d4fc;
+  display: inline-block;
+}
+
+.switch > .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.switch > .slider::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  left: 5px;
+  bottom: 5px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.checkbox:checked + .slider {
+  background-color: #6986f9;
+}
+
+.checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switch.blue > .slider {
+  background-color: #99ccff;
+}
+
+.switch.blue > .checkbox:checked + .slider {
+  background-color: #0066ff;
+}
+
+.switch.purple > .slider {
+  background-color: #cc99ff;
+}
+
+.switch.purple > .checkbox:checked + .slider {
+  background-color: #9933cc;
+}
+
+.switch.green > .slider {
+  background-color: #99ff99;
+}
+
+.switch.green > .checkbox:checked + .slider {
+  background-color: #00ff66;
+}
